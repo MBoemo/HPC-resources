@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#SBATCH -p pascal
+#SBATCH -p ampere
 #SBATCH -A <PI_SURNAME>-SL3-GPU
 #SBATCH --job-name=gpuJob
 #SBATCH --gres=gpu:1
@@ -14,7 +14,7 @@
 module purge
 module load rhel7/default-gpu
 module unload cuda/8.0
-module load python/3.6 cuda/11.0 cuda/11.1 cudnn/8.0_cuda-11.1
+module load cuda/11.0 cuda/11.1 cudnn/8.0_cuda-11.1
 
 source /home/<CRSid>/rds/hpc-work/tensorflow-env/bin/activate
 

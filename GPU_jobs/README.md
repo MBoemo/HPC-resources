@@ -7,7 +7,7 @@ GPU nodes use CentOS8, so this job should be submitted from `login-icelake`. Fro
 
 Description of sbatch directives:
 
-- `#SBATCH -p pascal` indicates pascal partition - GPU node.
+- `#SBATCH -p ampere` indicates ampere partition - GPU node.
 - `#SBATCH -A <PI_SURNAME>-SL3-GPU` indicates the account to be billed. This will be run at Service Level 3 (SL3) and will be billed out of the PI's GPU hours. `<PI_SURNAME>` should be replaced by the surname of your PI.
 - `#SBATCH --gres=gpu:1` specifies the number of GPUs we want to use - one in this case.
 - `#SBATCH --ntasks=1` and `SBATCH --nodes=1` specify the MPI ranks and number of nodes we want. We just want to run one script, one time, on one node, so these are both one.
